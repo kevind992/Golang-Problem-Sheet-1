@@ -1,10 +1,8 @@
-// Author: Kevin Delassus
-//Date: 20/09/17
-
+// Coded by: Kevin Delassus
+// Date : 21/09/2017
 //Adapted from https://tour.golang.org/welcome/4
 
 package main
-
 import (
 	"fmt"
 	"time"
@@ -13,4 +11,5 @@ import (
 func main() {
 
 	fmt.Println("The time is", time.Now())
+	
 }
