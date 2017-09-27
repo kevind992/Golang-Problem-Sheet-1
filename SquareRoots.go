@@ -6,26 +6,27 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
-func getSquareRoot(x := float64, u := float64){
+func calcutate(x float64, z float64) float64{
 	z_next := z - (((z*z) - x) / (2 * z))
 
-	return y
+	return z_next
 }
 
 func main() {
 
-	y := 20
+	z := 20
 	var x float64
 
 
-	for x = 1.0, x != getSQuareRoot(x,y),y = getSquareRoot(x,y){
+	for x = 1.0, x != calcutate( x , z ), z = calcutate( x , z ){
 
-		
+		fmt.Println("Current Guess" + x)
 	}
 
 	fmt.Println("")
 
-
+	fmt.Println("Result using the .SquareRoot" + z.getSQuareRoot())
 }
