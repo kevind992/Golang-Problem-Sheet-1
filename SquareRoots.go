@@ -1,6 +1,6 @@
 //Coder: Kevin Delassus
 //Date: 27-09-2017
-//FizzBuzz - Question o
+//FizzBuzz - Question 9
 
 package main
 
@@ -9,24 +9,25 @@ import (
 	"math"
 )
 
-func calcutate(x float64, z float64) float64{
-	z_next := z - (((z*z) - x) / (2 * z))
+func sqrt(x float64, z float64) float64{
 
-	return z_next
+	var z_next float64 = z - (((z*z) - x) / (2 * z))
+
+	return z_next 
 }
 
 func main() {
 
-	z := 20
-	var x float64
+	x := 100.0
+	var z float64
+	
 
+	for z = 1.0; z != sqrt(x , z); z = sqrt(x , z){
 
-	for x = 1.0, x != calcutate( x , z ), z = calcutate( x , z ){
-
-		fmt.Println("Current Guess" + x)
+		fmt.Println("Newtons Solutions are: ",z)
 	}
 
 	fmt.Println("")
 
-	fmt.Println("Result using the .SquareRoot" + z.getSQuareRoot())
+	fmt.Println("Solution using the SquareRoot Function: ",math.Sqrt(x))
 }
