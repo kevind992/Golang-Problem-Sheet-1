@@ -6,19 +6,39 @@
 package main
 
 import (
-	"bufio"
+	//"bufio"
 	"fmt"
-	"os"
+	//"os"
+	"math/rand"
 )
 
 func main() {
 
-	reader := bufio.NewReader(os.Stdin)
+	var i int
+	var ranNum int
+	
+	ranNum = rand.Intn(10)
 
-	fmt.Println("Please Enter a Single Number: ")
+	fmt.Print(ranNum)
+   
+	fmt.Println("Please Enter a Single Number between 1 & 10: ")
 	fmt.Println("---------------------")
 	fmt.Print("-> ")
-	number, _ := reader.ReadString('\n')
 
-	fmt.Println(number)
+	
+    fmt.Scan(&i)
+    //fmt.Println("read number", i, "from stdin")
+
+	if i > 10{
+		fmt.Println("number is greater then 10: ", i)
+	}else{
+		if ranNum == i{
+			fmt.Println("Correct Answer!!!")
+		}else{
+			fmt.Println("Wrong Answer")
+		}
+
+	}
+
+	
 }
