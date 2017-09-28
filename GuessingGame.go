@@ -16,29 +16,44 @@ func main() {
 
 	var i int
 	var ranNum int
+	count := 0
 	
 	ranNum = rand.Intn(10)
 
 	fmt.Print(ranNum)
    
-	fmt.Println("Please Enter a Single Number between 1 & 10: ")
+	fmt.Println("Please Enter a Single Number between 1 & 100: ")
 	fmt.Println("---------------------")
-	fmt.Print("-> ")
+
+	for i != ranNum{
+
+		fmt.Print("-> ")
+		fmt.Scan(&i)
+		
+		if i > ranNum{
+			fmt.Println("You are to High!")
+			count++
+		}
+		if i < ranNum{
+
+			fmt.Println("You are to Low!")
+			count++
+		}
+		if i == ranNum{
+			break
+		}
+	}
+	fmt.Println("Correct You Win")
+	CountTimes(count)
 
 	
-    fmt.Scan(&i)
-    //fmt.Println("read number", i, "from stdin")
+}
 
-	if i > 10{
-		fmt.Println("number is greater then 10: ", i)
+func CountTimes(c int){
+	if c == 0{
+		fmt.Println("Woow you guessed on the first go!! WELL DONE!!")
 	}else{
-		if ranNum == i{
-			fmt.Println("Correct Answer!!!")
-		}else{
-			fmt.Println("Wrong Answer")
-		}
-
+		fmt.Println("You Guessed ", c," times!!")
 	}
-
 	
 }
