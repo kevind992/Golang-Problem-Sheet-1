@@ -12,13 +12,18 @@ import (
 	"math/rand"
 )
 
+var entry [10]int
+
 func main() {
 
 	var i int
 	var ranNum int
 	count := 0
+	check := true
+
 	
-	ranNum = rand.Intn(10)
+	
+	ranNum = rand.Intn(100)
 
 	fmt.Print(ranNum)
    
@@ -30,14 +35,29 @@ func main() {
 		fmt.Print("-> ")
 		fmt.Scan(&i)
 		
+		
 		if i > ranNum{
-			fmt.Println("You are to High!")
-			count++
+
+			check = CheckArray(i,count)
+
+			if check == true{
+				fmt.Println("You are to High!")
+				
+				//fmt.Println(entry[count])
+				count++
+			}
 		}
 		if i < ranNum{
 
-			fmt.Println("You are to Low!")
-			count++
+			 check = CheckArray(i,count)
+
+			if check == true{
+				fmt.Println("You are to Low!")
+				
+				//fmt.Println(entry[count])
+				count++
+			}
+			
 		}
 		if i == ranNum{
 			break
@@ -48,10 +68,19 @@ func main() {
 
 	
 }
+func CheckArray(i int, guess int){
 
+	entry[i] = guess
+
+	for x := 0; x < count; x++{
+		if entry[i] == guess{
+			return false
+		}else {return true}
+	}
+}
 func CountTimes(c int){
 	if c == 0{
-		fmt.Println("Woow you guessed on the first go!! WELL DONE!!")
+		fmt.Println("Woow you guessed correct on the first go!! WELL DONE!!")
 	}else{
 		fmt.Println("You Guessed ", c," times!!")
 	}
