@@ -17,8 +17,8 @@ func main() {
     19,100, 8,50,
   }
 
-  fmt.Println("This Program Displays the Largest and Smallest Numbers in a List")
-  fmt.Println("=================================================================")
+  //Calling header function
+  Header()
   
   //For loop checking for biggest number
   for _,v:=range array {
@@ -40,4 +40,12 @@ func main() {
     }
   }
   fmt.Println("The Smallest number is: ", smallest) //Displaying Smallest Number
+}
+
+//Header function displaying header
+func Header(){
+
+	fmt.Println("This Program Displays the Largest and Smallest Numbers in a List")
+	fmt.Println("=================================================================")
+
 }
