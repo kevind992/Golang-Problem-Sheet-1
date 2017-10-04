@@ -14,7 +14,6 @@ import (
 	//"os"
 )
  
-
 func main(){
 
 	//Setting variables
