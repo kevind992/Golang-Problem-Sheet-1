@@ -1,25 +1,25 @@
 //Author: Kevin Delassus
 //Date: 29/09/17
+//Write a function that merges two sorted lists into a new sorted list,
+// e.g. merge([1,4,6], [2,3,5]) = [1,2,3,4,5,6].
+//Source: https://stackoverflow.com/questions/16248241/concatenate-two-slices-in-go
 
 package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 func main() {
 
-	test1 := [4]int {1,2,3,4}
-	test2 := [4]int {5,6,7,8}
-
-	fmt.Println(test1 , test2)
 	
+	//Calling append merges 2 lists together
+	s := append([]int{1, 4, 3, 7, 50}, []int{5, 2, 6, 8, 11}...)
 
+	//sort.Ints() is sorting the conbined List
+	sort.Ints(s);
 
-	//test3 := test1[2] + test2[3]
-
-	/*for i := 0; i < 2; i++ {
-
-		fmt.Println(test3[i])
-	}*/
+	//Printing the result which is the 2 lists combined
+	fmt.Println("Here is the sorted Lists ", s )
 }
