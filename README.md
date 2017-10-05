@@ -1,5 +1,5 @@
-# go-problem-sheet
-My solutions to the Go Problems
+
+# My README to my solutions to the Go Problems
 
 Go is a programming language created at Google
 in 2007 by Robert Griesemer, Rob Pike, and Ken Thompson.
