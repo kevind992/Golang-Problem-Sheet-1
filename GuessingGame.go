@@ -1,11 +1,18 @@
+//Question 5
 //Author: Kevin Delassus
 //Date: 27/09/17
-//Source: https://adriann.github.io/programming_problems.html
+//Write a guessing game where the user must guess a randomly generated number. 
+//After every guess the program tells the user whether their number was too high 
+//or too low. At the end, the number of tries should be printed. 
+//It counts only as one try if they input the same number multiple times 
+//consecutively.
+//Adapted From: https://adriann.github.io/programming_problems.html
 
 
 package main
 
 import (
+	//Importing the string and the math random package
 	"fmt"
 	"math/rand"
 )
@@ -14,7 +21,8 @@ import (
 var entry [50]int
 
 func main() {
-
+	
+	//Setting Variables
 	var guess int
 	var ranNum int
 	count := 0
@@ -22,10 +30,12 @@ func main() {
 
 	//Generating a random number between 1 & 100
 	ranNum = rand.Intn(100)
-
+	
+	//Displaying Header
 	fmt.Println("Please Enter a Single Number between 1 & 100: ")
 	fmt.Println("---------------------------------")
-
+	
+	//for to check if guess is not equaled to the random number
 	for guess != ranNum{
 
 		fmt.Print("-> ")

@@ -1,6 +1,8 @@
-//Coder: Kevin Delassus
-//Date: 02/10/17	
-//Source: https://stackoverflow.com/questions/1752414/how-to-reverse-a-string-in-go
+//Question 10
+//Author: Kevin Delassus
+//Date: 02/10/17
+//Write a function to reverse a string in Go.	
+//Adapted from: https://stackoverflow.com/questions/1752414/how-to-reverse-a-string-in-go
 
 package main
 
@@ -9,7 +11,7 @@ import(
 )
 
 func main(){
-
+	
 	//String which needs to be reversed
 	string := "Kevin"
 
